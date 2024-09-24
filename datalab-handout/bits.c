@@ -199,7 +199,7 @@ int samesign(int x, int y) {
 /*
  * logtwo - Calculate the base-2 logarithm of a positive integer using bit shifting.
  *   Example: logtwo(32) = 5 (v >0)
- *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, but no while/for
  *   Max ops: 25
  *   Rating: 4
  */
@@ -223,7 +223,7 @@ int byteSwap(int x, int n, int m) {
  * reverse - Reverse the bit order of a 32-bit unsigned integer.
  *   Example: reverse(0xFFFF0000) = 0x0000FFFF
  *   Note: Assumes an unsigned integer is 32 bits long.
- *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if, while
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if,but no while/for
  *   Max ops: 30
  *   Rating: 3
  */
