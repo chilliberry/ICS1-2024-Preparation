@@ -148,13 +148,17 @@ int test_logicalShift(int x, int n) {
   return (int) shifted;
 }
 unsigned test_reverse(unsigned v){
-  unsigned int s = sizeof(v) * CHAR_BIT; // bit size; must be power of 2 
-  unsigned int mask = ~0;         
-  while ((s >>= 1) > 0) 
-  {
-    mask ^= (mask << s);
-    v = ((v >> s) & mask) | ((v << s) & ~mask);}
-  return v;
+  unsigned int r = v; 
+  int s = sizeof(v) * CHAR_BIT - 1;
+  
+  for (v >>= 1; v; v >>= 1)
+  {   
+    r <<= 1;
+    r |= v & 1;
+    s--;
+  }
+  r <<= s; // shift when v's highest bits are zero
+  return r;
 }
 unsigned test_float_i2f(int x) {
   float f = (float) x;
