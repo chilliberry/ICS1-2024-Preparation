@@ -223,7 +223,7 @@ int byteSwap(int x, int n, int m) {
  * reverse - Reverse the bit order of a 32-bit unsigned integer.
  *   Example: reverse(0xFFFF0000) = 0x0000FFFF
  *   Note: Assumes an unsigned integer is 32 bits long.
- *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if,but no while/for
+ *   Legal ops: Any integer/unsigned operations incl. ||, &&. also if
  *   Max ops: 30
  *   Rating: 3
  */
