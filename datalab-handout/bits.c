@@ -177,6 +177,7 @@ NOTES:
  *   Max ops: 7
  *   Rating: 1*/
 int bitXor(int x, int y) {
+   //test
    return 2;
 }
 /*
